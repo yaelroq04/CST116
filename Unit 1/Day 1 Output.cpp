@@ -20,16 +20,16 @@ end function
 
 using namespace std;
 
-void Poem();
+void poem();
 
 int main() {
     cout << "Hello, World!\n";
-    Poem();
+    poem();
 
     return 0;
 }
 
-void Poem(){
+void poem(){
     cout << "Nature's first green is gold,\nHer hardest hue to hold.\nHer early leaf's a flower,\nBut only so an hour.";
 
     return;
