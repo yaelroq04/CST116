@@ -18,7 +18,8 @@ void sphereVolume();
 int main() {
     
     //heronsFormula();
-    quadraticFormula();
+    //quadraticFormula();
+    sphereVolume();
     
 }
 
@@ -42,15 +43,15 @@ void heronsFormula(){
     int herons = sqrt(semiPerimeter * (semiPerimeter-sideA) * (semiPerimeter-sideB) * (semiPerimeter-sideC));
 
     //prints the area after being calculated by Heron's Formula
-    cout << "The area calculated is: " << herons;
+    cout << "The area calculated is: " << herons << endl;
 
 }
 
-void quadtraticFormula(){
+void quadraticFormula(){
 
-    float A = 0;
-    float B = 0;
-    float C = 0;
+    double A = 0;
+    double B = 0;
+    double C = 0;
 
     cout << "Please enter a value for A: ";
     cin >> A;
@@ -59,10 +60,24 @@ void quadtraticFormula(){
     cout << "Please enter a value for C: ";
     cin >> C;
 
-    int discriminant = B * B - 4 * A * C;
-    int denominator = 2 * A;
-    int root = (-B + sqrt(discriminant)) / denominator;
+    double DISCRIMINANT = B * B - 4 * A * C;
 
-    cout << root;
+    double ROOT1 = (-B + sqrt(DISCRIMINANT)) / (2 * A);
+    double ROOT2 = (-B - sqrt(DISCRIMINANT)) / (2 * A);
 
+    cout << "Roots are " << ROOT1 << " and " << ROOT2 << endl;
+
+}
+
+void sphereVolume(){
+
+    double RADIUS;
+    const double PI = M_PI;
+
+    cout << "Please enter the radius of your sphere: ";
+    cin >> RADIUS;
+
+    double VOLUME = 4.0 / 3.0 * PI * pow(RADIUS, 3.0);
+
+    cout << "The volume of your sphere is " << VOLUME << endl;
 }
