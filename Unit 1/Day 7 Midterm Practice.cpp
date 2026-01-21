@@ -8,14 +8,60 @@
 //the temperature is 32 or more, say it will rain.
 //3. Answer the following questions.
 //3a.  What are two examples of application software?
+// Word and Zoom
 //3b.  What are the 7 steps of the development process?
+// Planning, Requirements, Design, Coding, Testing, Deployment, Maintenance
 //3c.  What is 134 in binary and hex? 
-//
+//10000110 , 86
 
 #include <iostream>
+#include <cmath>
+
 using namespace std;
+
+void testReliability();
+void weatherAdvice();
 
 int main()
 {
-    
+    testReliability();
+    weatherAdvice();
+}
+
+void testReliability(){
+    double lambda;
+    double time;
+
+    cout << "Enter lambda: ";
+    cin >> lambda;
+    cout << "Enter time: ";
+    cin >> time;
+
+    double reliability = exp(-(lambda * time));
+
+    cout << "Reliability = " << reliability << endl;
+
+}
+
+void weatherAdvice(){
+
+    char cloudy;
+    int temp;
+
+    cout << "Is it cloudy? (y/n): ";
+    cin >> cloudy;
+    cout << "Enter the temperature: ";
+    cin >> temp;
+
+    if(cloudy == 'n'){
+        cout << "It is sunny." << endl;
+    }
+    else {
+        if(temp < 32){
+            cout << "It will snow." << endl;
+        }
+        else {
+            cout << "It will rain." << endl;
+        }
+    }
 }
