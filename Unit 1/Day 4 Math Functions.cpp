@@ -17,8 +17,8 @@ void sphereVolume();
 
 int main() {
     
-    //heronsFormula();
-    //quadraticFormula();
+    heronsFormula();
+    quadraticFormula();
     sphereVolume();
     
 }
@@ -49,35 +49,35 @@ void heronsFormula(){
 
 void quadraticFormula(){
 
-    double A = 0;
-    double B = 0;
-    double C = 0;
+    double a = 0;
+    double b = 0;
+    double c = 0;
 
     cout << "Please enter a value for A: ";
-    cin >> A;
+    cin >> a;
     cout << "Please enter a value for B: ";
-    cin >> B;
+    cin >> b;
     cout << "Please enter a value for C: ";
-    cin >> C;
+    cin >> c;
 
-    double DISCRIMINANT = B * B - 4 * A * C;
+    double discriminant = b * b - 4 * a * c;
 
-    double ROOT1 = (-B + sqrt(DISCRIMINANT)) / (2 * A);
-    double ROOT2 = (-B - sqrt(DISCRIMINANT)) / (2 * A);
+    double root1 = (-b + sqrt(discriminant)) / (2 * a);
+    double root2 = (-b - sqrt(discriminant)) / (2 * a);
 
-    cout << "Roots are " << ROOT1 << " and " << ROOT2 << endl;
+    cout << "Roots are " << root1 << " and " << root2 << endl;
 
 }
 
 void sphereVolume(){
 
-    double RADIUS;
+    double radius;
     const double PI = M_PI;
 
     cout << "Please enter the radius of your sphere: ";
-    cin >> RADIUS;
+    cin >> radius;
 
-    double VOLUME = 4.0 / 3.0 * PI * pow(RADIUS, 3.0);
+    double volume = 4.0 / 3.0 * PI * pow(radius, 3.0);
 
-    cout << "The volume of your sphere is " << VOLUME << endl;
+    cout << "The volume of your sphere is " << volume << endl;
 }
